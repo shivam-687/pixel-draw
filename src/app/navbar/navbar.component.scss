@@ -1,0 +1,40 @@
+.action_btn{
+  background-color: #2b2b2b;
+  color: #6e6e6e;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action_btn-active{
+  background-color: #6e6e6e;
+  color: #fff;
+}
+
+.action_btn:hover{
+  background-color: #6e6e6e;
+  color: #fff;
+}
+
+.app-nav-container{
+  background-color: #1d1d1d;
+  width: 100%;
+  flex-grow: 1;
+  padding: 10px;
+  height: 100%;
+}
+
+.color_input{
+  border: 1px solid #2b2b2b;
+  height: 50px;
+  padding: 1px;
+  background-color: #2b2b2b;
+}
+
+.divider{
+  background-color: #6e6e6e;
+  height: 1px;
+  width: 100%;
+}

@@ -1,0 +1,6 @@
+
+<ng-container *ngIf="alertsArray.length > 0">
+  <div class="alert_container">
+  <app-alert-message *ngFor="let alert of alertsArray;  let i = index" [alert-data]= "{message: alert.message, class: alerts[alert.type], index: i}"></app-alert-message>
+  </div>
+</ng-container>

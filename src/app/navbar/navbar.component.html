@@ -1,0 +1,32 @@
+<div class="app-nav-container d-flex align-items-center flex-column">
+  <button class="btn action_btn mr-2" [ngClass]="currentMode === 'object' ? 'action_btn-active':''" data-bs-toggle="tooltip" data-bs-placement="right" title="Select Mode"><i class="material-icons" (click)="setObjectMode($event)">
+    near_me
+    </i></button>
+  <button class="btn action_btn mr-2" [ngClass]="currentMode === 'draw' ? 'action_btn-active':''" (click)="setToDrawMode($event)" data-bs-toggle="tooltip" data-bs-placement="right" title="Draw Mode"><i class="material-icons">
+    brush
+    </i></button>
+  <button class="btn action_btn mr-2" [ngClass]="currentMode === 'erase' ? 'action_btn-active':''" (click)="setToEraseMode($event)" data-bs-toggle="tooltip" data-bs-placement="right" title="Erase Mode"><i class="material-icons">
+    clear
+    </i></button>
+  <button class="btn action_btn mr-2" (click)="reset($event)" data-bs-toggle="tooltip" data-bs-placement="right" title="Reset Canvas"><i class="material-icons">
+    restart_alt
+    </i></button>
+
+  <hr class="divider">
+  <input type="color" (change)="onColorChange($event)" class="form-control color_input" value="rgb(255, 0, 0)">
+  <div class="dropend mt-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Change Grid Size">
+    <button class="btn action_btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      {{currentSize}}
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="background-color: #363636; color: #6b6b6b;">
+      <div class="mb-3 p-2">
+        <label for="size-input" class="form-label">Grid Size</label>
+        <input type="number" class="form-control" id="size-input"  [(ngModel)]="currentSize">
+      </div>
+      <hr class="divider my-1">
+      <div class="d-flex justify-content-end p-2">
+        <button class="btn action_btn mb-0" (click)="setGridSize($event)">Change</button>
+      </div>
+    </ul>
+  </div>
+</div>

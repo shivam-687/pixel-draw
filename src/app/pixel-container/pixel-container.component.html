@@ -1,0 +1,3 @@
+<div class="pixels_container" [style]="{'--size': size}">
+  <app-pixel *ngFor="let pixel of pixelArray" (changedColor)="updatePixel($event, pixel)"></app-pixel>
+</div>
