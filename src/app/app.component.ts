@@ -8,8 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pixel-draw';
+  isDesktop = true;
 
   constructor(private pdService: PixelDrawService) {
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      this.isDesktop = false;
+    }
     window.addEventListener('mousedown', (e: Event) => {
       const targetElement: HTMLElement = e.target as HTMLElement;
       if (targetElement.classList.contains('pixel')) {

@@ -10,6 +10,7 @@ import {ReactiveFormsModule, FormsModule } from '@angular/forms'
 import { ColorPickerModule } from 'ngx-color-picker';
 import { AlertComponent } from './alert/alert.component';
 import { AlertMessageComponent } from './alert-message/alert-message.component';
+import { NoDesktopScreenComponent } from './no-desktop-screen/no-desktop-screen.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AlertMessageComponent } from './alert-message/alert-message.component';
     PixelComponent,
     ColorPickerComponent,
     AlertComponent,
-    AlertMessageComponent
+    AlertMessageComponent,
+    NoDesktopScreenComponent
   ],
   imports: [
     BrowserModule,

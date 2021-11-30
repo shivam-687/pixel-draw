@@ -1,10 +1,17 @@
 <app-alert></app-alert>
 
-<div class="main d-flex">
-  <div class="nav_section ">
-    <app-navbar></app-navbar>
+
+<ng-container *ngIf="!isDesktop">
+  <app-no-desktop-screen></app-no-desktop-screen>
+</ng-container>
+
+<ng-container *ngIf="isDesktop">
+  <div class="main d-flex">
+    <div class="nav_section ">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="container_section">
+      <app-pixel-container></app-pixel-container>
+    </div>
   </div>
-  <div class="container_section" >
-    <app-pixel-container></app-pixel-container>
-  </div>
-</div>
+</ng-container>
