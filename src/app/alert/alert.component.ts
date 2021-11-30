@@ -18,26 +18,26 @@ export class AlertComponent implements OnInit {
     warning: 'alert-warning'
   }
   alertsArray: AlertType[] = [];
-  private counter = 0;
+
 
   private subsink = new SubSink();
 
   constructor(private alertService: AlertService) { }
 
   ngOnInit(): void {
-    this.subsink.add(this.alertService.error$.subscribe(error => {
+    this.subsink.add(this.alertService.alert$.subscribe(error => {
       this.alertsArray.push(error);
       console.log(`${error} is pushed size: ${this.alertsArray.length}`);
     }))
   }
 
-  onAutoClose(index: number){
+  onAlertClose(index: number){
 
+    this.alertsArray.splice(index, 1);
+    this.alertsArray.forEach(element => {
+      console.log(JSON.parse(JSON.stringify(element)));
+    });
   }
 
-  addError(){
-    const count = this.counter++;
-    this.alertService.setError({message: `This is alert ${count}`, type: 'info'});
-  }
 
 }

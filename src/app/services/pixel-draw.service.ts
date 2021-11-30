@@ -1,6 +1,8 @@
 import { ColorConfig } from './../pdColorConfig';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { AlertService } from './alert.service';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 
 @Injectable({
@@ -35,7 +37,7 @@ export class PixelDrawService {
   private reset =  new BehaviorSubject<boolean>(false);
   private _reset = this.reset.asObservable();
 
-  constructor() {
+  constructor(private alertService: AlertService) {
     const localData = JSON.parse(localStorage.getItem('pdData'));
     if(localData){
       this.data = localData;
@@ -87,6 +89,7 @@ export class PixelDrawService {
       this.updateDataByKey('size', size);
       return;
     }
+    this.alertService.error('Invalid size : size must be between 4 to 100');
     throw new Error('Invalid size : size must be between 4 to 100');
   }
 

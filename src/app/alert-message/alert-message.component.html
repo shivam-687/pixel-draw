@@ -1,5 +1,7 @@
-<ng-container *ngIf="data && show">
-  <div class="alert" role="alert" [ngClass]="data.class" >
+<ng-container *ngIf="data">
+  <div alert_message class="alert alert-dismissible fade show mb-1" role="alert" [ngClass]="data.class" >
     {{data.message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="onClose()"></button>
   </div>
+  <br>
 </ng-container>

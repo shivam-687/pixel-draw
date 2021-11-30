@@ -1,11 +1,13 @@
 .alert_container{
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-end;
+  flex-direction: column;
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
+  background-color: transparent;
 }
 
 .alert_msg{

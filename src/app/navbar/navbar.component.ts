@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  color: string = '';
+  color: string = '#ffffff';
   colorData: ColorConfig = {
     pixelDefaultColor: '',
     drawColor: ''
@@ -33,6 +33,7 @@ export class NavbarComponent implements OnInit {
 
     this.subSink.add(this.pdService.colorConf$.subscribe(colorData => {
       this.colorData = colorData;
+      this.color = colorData.drawColor;
       console.log("ColorData: ", this.colorData);
     }));
   }
