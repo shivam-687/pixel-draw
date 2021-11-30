@@ -1,27 +1,16 @@
 # PixelDraw
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
+This project is a fun project for angular beginners.
 
-## Development server
+You can see PixelDrawProject [here](https://pixeldrawproject.netlify.app/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+1. **ObjectMode:** This mode is on by default. The cursor will do nothing as long as this mode is on. What I mean is that when you do not want to draw, you can keep this mode on. There is also a shortcut to turn it on `ctrl + o`.
+2. **DrawMode:** You can do drawing by turning on this mode. You can activate this mode with the button or with the shortcut `ctrl+d`.
+3. **EraseMode:** You can erase your drawing with the help of this mode. Its shortcut is `ctrl + e` .
+4. **ClearAllMode:** By clicking on this mode, all the drawings will be erased. shortcut is `ctrl+r`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Who is this for
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+First of all, this is a fun project, so if seen, it is for all developers. Any developer can add more features to it and make it more useful. But as I said this is a fun project which is built on Angular framework so any beginner can see and learn it and can add more features to it with their creativity.
